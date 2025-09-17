@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="description" content="Reserve an UberHamster overnight suite and share details about your hamster crew, extras, and special care requests." />
+  <title>UberHamster | Make a Reservation</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="nav-brand" href="index.html">UberHamster</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="reservation.html">Make a Reservation</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="faq.html">FAQ</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero" data-animate>
+      <h1>Reserve a suite for your tiny explorer</h1>
+      <p>Share a few details and we will curate the perfect overnight boarding experience for every hamster in your crew.</p>
+    </section>
+
+    <section class="reservation-card" data-animate>
+      <form id="reservationForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="ownerName">Your name</label>
+            <input type="text" id="ownerName" name="ownerName" placeholder="Alex Hammy" required />
+          </div>
+          <div class="form-group">
+            <label for="ownerEmail">Email address</label>
+            <input type="email" id="ownerEmail" name="ownerEmail" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="ownerPhone">Phone</label>
+            <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="555-123-4567" />
+          </div>
+          <div class="form-group">
+            <label for="dropOff">Drop-off date</label>
+            <input type="date" id="dropOff" name="dropOff" required />
+          </div>
+          <div class="form-group">
+            <label for="pickUp">Pick-up date</label>
+            <input type="date" id="pickUp" name="pickUp" required />
+          </div>
+          <div class="form-group">
+            <label for="dropOffTime">Preferred drop-off time</label>
+            <input type="time" id="dropOffTime" name="dropOffTime" />
+          </div>
+        </div>
+
+        <h2>Hamster squad</h2>
+        <div class="hamsters-container">
+          <div class="hamster-card" data-index="1">
+            <h3 class="hamster-heading">Hamster 1</h3>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="hamsterName-1">Name</label>
+                <input type="text" id="hamsterName-1" name="hamsterName-1" data-base="hamsterName" placeholder="Cinnamon" required />
+              </div>
+              <div class="form-group">
+                <label for="hamsterType-1">Breed / type</label>
+                <select id="hamsterType-1" name="hamsterType-1" data-base="hamsterType">
+                  <option value="Syrian">Syrian</option>
+                  <option value="Dwarf">Dwarf</option>
+                  <option value="Chinese">Chinese</option>
+                  <option value="Roborovski">Roborovski</option>
+                  <option value="Campbell">Campbell</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hamsterAge-1">Age</label>
+                <input type="text" id="hamsterAge-1" name="hamsterAge-1" data-base="hamsterAge" placeholder="1.5 years" />
+              </div>
+              <div class="form-group">
+                <label for="hamsterPersonality-1">Personality &amp; preferences</label>
+                <textarea id="hamsterPersonality-1" name="hamsterPersonality-1" data-base="hamsterPersonality" placeholder="Loves carrot chips and late-night wheel time."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="addHamster" class="add-hamster">+ Add another hamster</button>
+
+        <h2>Extras</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label><input type="checkbox" name="extrasPhotoStream" value="yes" /> Nightly photo stream</label>
+          </div>
+          <div class="form-group">
+            <label><input type="checkbox" name="extrasSpa" value="yes" /> Sand bath &amp; spa treatment</label>
+          </div>
+          <div class="form-group">
+            <label><input type="checkbox" name="extrasPlayground" value="yes" /> Extended playroom time</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Anything else we should know?</label>
+          <textarea id="notes" name="notes" placeholder="Feeding schedule, health notes, favorite lullabies..."></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Send reservation request</button>
+        <div id="reservationNotice"></div>
+      </form>
+
+      <template id="hamsterTemplate">
+        <div class="hamster-card">
+          <h3 class="hamster-heading">Hamster</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="" data-base="hamsterName" placeholder="Cinnabun" required />
+            </div>
+            <div class="form-group">
+              <label>Breed / type</label>
+              <select name="" data-base="hamsterType">
+                <option value="Syrian">Syrian</option>
+                <option value="Dwarf">Dwarf</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Roborovski">Roborovski</option>
+                <option value="Campbell">Campbell</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="text" name="" data-base="hamsterAge" placeholder="2 years" />
+            </div>
+            <div class="form-group">
+              <label>Personality &amp; preferences</label>
+              <textarea name="" data-base="hamsterPersonality" placeholder="Shy at first, loves apple slices"></textarea>
+            </div>
+          </div>
+        </div>
+      </template>
+    </section>
+    <footer class="footer">
+      <div>
+        <h4>Visit us</h4>
+        <p>123 Burrow Lane<br />San Francisco, CA</p>
+      </div>
+      <div>
+        <h4>Stay connected</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">HamsterTok</a>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <p class="legal">© <span id="year"></span> UberHamster. Cozy nights for curious whiskers.</p>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
