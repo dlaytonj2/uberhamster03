@@ -398,11 +398,35 @@ details p {
   border-radius: 18px;
   padding: 1.8rem;
   border: 1px solid rgba(58, 176, 162, 0.2);
+  position: relative;
 }
 
 .pricing-tier h3 {
   margin-top: 0;
   margin-bottom: 0.6rem;
+}
+
+.preferred-tier {
+  border-color: var(--primary);
+  background: linear-gradient(140deg, rgba(255, 209, 102, 0.38), rgba(58, 176, 162, 0.18));
+  box-shadow: 0 26px 48px rgba(176, 70, 36, 0.18);
+  transform: translateY(-8px);
+}
+
+.preferred-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  padding: 0.35rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 24px rgba(176, 70, 36, 0.25);
 }
 
 .price {
@@ -421,6 +445,19 @@ details p {
   margin: 1rem 0 0;
   padding-left: 1.2rem;
   color: var(--muted);
+}
+
+.currency-note {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.availability-note {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-dark);
 }
 
 .quick-contact {
