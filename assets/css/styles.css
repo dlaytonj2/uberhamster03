@@ -475,7 +475,10 @@ details p {
 
 .quick-contact a {
   font-weight: 600;
-  color: var(--primary);
+}
+
+.quick-contact .cta-button {
+  color: #fff;
 }
 
 @media (max-width: 720px) {
